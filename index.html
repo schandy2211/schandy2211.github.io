@@ -6,56 +6,80 @@
   <title>Sruthy K. Chandy</title>
   <style>
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      background: #f7f9fa;
       color: #222;
-      background: #fafafa;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
       text-align: center;
-      padding: 3rem 1rem 1rem 1rem;
+      padding: 3rem 1rem 1rem;
     }
     header h1 {
-      font-size: 2em;
+      font-size: 2rem;
       margin-bottom: 0.3rem;
       font-weight: 600;
+      color: #0a4f5f;
     }
     header h2 {
-      font-size: 1em;
+      font-size: 1rem;
       font-weight: 400;
       color: #555;
       margin-top: 0;
     }
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
     main {
-      max-width: 750px;
+      max-width: 800px;
       margin: auto;
       padding: 2rem;
       background: #fff;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      border-radius: 8px;
     }
     section {
       margin-bottom: 2rem;
     }
     h3 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.4rem;
-      color: #333;
+      border-bottom: 2px solid #0a4f5f;
+      padding-bottom: 0.3rem;
+      color: #0a4f5f;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h3 span {
+      font-size: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
     }
     a {
-      color: #0077cc;
+      color: #007c89;
       text-decoration: none;
+      transition: 0.2s;
     }
     a:hover {
+      color: #0a4f5f;
       text-decoration: underline;
     }
     footer {
       text-align: center;
-      font-size: 0.9em;
-      color: #666;
-      padding: 2rem 0;
+      padding: 1.5rem;
+      color: #555;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -64,43 +88,45 @@
   <header>
     <h1>Sruthy K. Chandy</h1>
     <h2>Computational Chemist | Machine Learning Scientist | UC Berkeley / LBNL Postdoctoral Scholar</h2>
+    <img src="PXL_20251004_214206593~2.jpg" alt="Sruthy K. Chandy">
   </header>
 
   <main>
     <section>
-      <h3>About</h3>
+      <h3><span>🧬</span> About</h3>
       <p>
-        I am a postdoctoral scholar at UC&nbsp;Berkeley and Lawrence Berkeley National Laboratory,
-        where I integrate quantum chemistry, molecular simulations, and machine learning to model
-        complex chemical systems. My research focuses on developing physics-informed and
-        data-driven frameworks for molecular property prediction, catalysis, and aqueous interface dynamics.
+        I am a postdoctoral scholar at <a href="https://thglab.berkeley.edu/team/dr-sruthy-chandy/" target="_blank">UC Berkeley and Lawrence Berkeley National Laboratory</a>,
+        where I combine quantum chemistry, molecular simulations, and machine learning to study catalytic and aqueous systems.
+        My research focuses on developing physics-informed and data-driven frameworks for molecular property prediction, catalysis, and interface dynamics.
+        Previously, I completed my Ph.D. in Chemistry at Indiana University in the
+        <a href="https://raghavachari.lab.indiana.edu/" target="_blank">Raghavachari Group</a>.
       </p>
     </section>
 
     <section>
-      <h3>Research Highlights</h3>
+      <h3><span>🔬</span> Research Highlights</h3>
       <ul>
         <li><strong>MIM-ML:</strong> Developed a fragment-based, physics-informed ML framework for NMR prediction in biomolecules.</li>
-        <li><strong>Hybrid ML Force-Field Corrections:</strong> Built delta-learning models bridging polarizable force-field and DFT accuracies.</li>
-        <li><strong>Fe<sub>3</sub>O<sub>4</sub>–Water–N<sub>2</sub> Interfaces:</strong> Combined AIMD and DFT to reveal reaction mechanisms for ambient ammonia synthesis.</li>
+        <li><strong>Hybrid ML Force-Field Corrections:</strong> Built delta-learning models bridging polarizable force-field and DFT accuracy.</li>
+        <li><strong>Fe<sub>3</sub>O<sub>4</sub>–Water–N<sub>2</sub> Interfaces:</strong> Combined AIMD and DFT to uncover mechanisms for ambient ammonia synthesis.</li>
         <li><strong>Dielectric Properties of Polarizable Water:</strong> Performed long-timescale simulations to quantify dielectric decrement and solvation structure.</li>
       </ul>
     </section>
 
     <section>
-      <h3>Selected Publications</h3>
+      <h3><span>📚</span> Selected Publications</h3>
       <ul>
         <li><em>J. Am. Chem. Soc.</em>, 2025 – <strong>Lead Author</strong>: “Ammonia Synthesis under Ambient Conditions via Fe₃O₄–Water Interfaces.”</li>
         <li><em>J. Chem. Theory Comput.</em>, 2022 – <strong>Lead Author</strong>: “Fragment-Based Machine Learning for NMR Prediction (MIM-ML).”</li>
       </ul>
       <p>
-        Full publication list available on
+        Full publication list on
         <a href="https://scholar.google.com/citations?user=2PBePvkAAAAJ&hl=en" target="_blank">Google Scholar</a>.
       </p>
     </section>
 
     <section>
-      <h3>Links</h3>
+      <h3><span>🌐</span> Links</h3>
       <ul>
         <li><a href="https://github.com/schandy2211" target="_blank">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/sruthy-k-chandy/" target="_blank">LinkedIn</a></li>
