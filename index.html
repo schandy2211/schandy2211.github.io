@@ -138,9 +138,17 @@
     <section id="postdoc" class="section card reveal">
       <h2>Postdoctoral Research — UC Berkeley / LBNL</h2>
       <ul>
-        <li><strong>N<sub>2</sub> Reduction at Magnetite–Water Interfaces:</strong> Ab initio molecular dynamics and free-energy simulations to elucidate adsorption, activation, and PCET steps at Fe<sub>3</sub>O<sub>4</sub>–H<sub>2</sub>O interfaces under ambient conditions; integrated with AP-XPS insights.</li>
-        <li><strong>Hybrid ML Corrections for Polarizable Force Fields:</strong> Delta-learning models (PyTorch) trained on ab initio data to refine AMOEBA energies/forces for water and ion–water clusters; improved accuracy and transferability while preserving physical structure.</li>
-        <li><strong>Dielectric Suppression in Electrolytes:</strong> Long-timescale simulations quantifying ion-induced dielectric decrement; comparative analysis with hybrid DFT (SCAN, PBE0-D3) benchmarks.</li>
+        <li><strong>N<sub>2</sub> Reduction at Magnetite–Water Interfaces:</strong> •	Conducted advanced AIMD simulations to elucidate the nitrogen reduction mechanisms to produce ammonia at ambient conditions on iron oxide-water interfaces, uncovering mechanistic insights that align with experimental X-ray photoelectron spectroscopy (XPS) data.
+•	Analyzed complex reaction mechanisms through detailed DFT calculations, successfully identifying key intermediates and transition states responsible for ammonia production, which provided insights projected to optimize industrial-scale nitrogen reduction processes.
+        </li>
+        <li><strong>Hybrid ML Corrections for Polarizable Force Fields:</strong> •	Designed, generated, and curated a large-scale dataset (1M+ samples) of molecular interactions, then developed and trained deep learning models using PyTorch to build accurate potential energy surfaces for ion-water and water clusters.
+•	Implemented model validation and optimization techniques, achieving improved predictive accuracy and generalization.
+•	Collaborated with interdisciplinary teams to integrate ML models into larger simulation frameworks, enabling efficient and accurate simulations of complex aqueous systems.
+        </li>
+        <li><strong>Dielectric Suppression in Electrolytes:</strong>•	Investigated the dielectric decrement of ionic solutes (OH⁻, Na⁺, Cl⁻) in water using polarizable force fields (AMOEBA) and AIMD (CP2K), quantifying changes in dielectric constant, dipole fluctuations, RDFs, and diffusion.
+•	Performed large-scale AIMD with hybrid DFT (SCAN, PBE0-D3) to capture ion-specific polarization effects on water structure and dielectric response.
+•	Developed automated workflows for β (dielectric decrement coefficient) and designed benchmarking protocols to validate force fields against experiment, with applications to electrochemical interfaces and ionic transport.
+        </li>
         <li><strong>Data & Workflow Engineering:</strong> Automated dataset generation (CP2K + ASE), reproducible pipelines, and large-scale training/inference on NERSC GPU/CPU resources.</li>
       </ul>
     </section>
@@ -149,8 +157,18 @@
     <section id="phd" class="section card reveal">
       <h2>Ph.D. Research — Indiana University (Raghavachari Group)</h2>
       <ul>
-        <li><strong>MIM-ML for NMR Prediction:</strong> Fragmentation-based framework with physics-aware features (Born radii, partial charges, bond topology); random-forest & delta-learning models achieving near-DFT accuracy for proteins and nucleic acids.</li>
-        <li><strong>CO<sub>2</sub> Reduction Catalysis:</strong> Multi-scale DFT studies on Re/Mo complexes; mapped PCET pathways and solvent effects to rationalize activity/selectivity trends.</li>
+        <li><strong>MIM-ML for NMR Prediction:</strong> •	Developed a novel random forest-based machine learning model to predict NMR chemical shifts for nucleic acid systems, achieving high-level DFT accuracy with significant computational speedup.
+•	Leveraged fragmentation-based quantum calculations to train the ML model, enabling predictions for large systems that are computationally prohibitive with traditional QM methods.
+•	Integrated structural and electronic descriptors to enhance prediction reliability, accurately capturing the relationship between molecular structure and NMR chemical shifts.
+•	Achieved excellent performance, with a mean absolute deviation of ~0.30 ppm for ¹H and ~2.00 ppm for ¹³C chemical shifts compared to experimental values, surpassing conventional methods.
+        </li>
+        <li><strong>CO<sub>2</sub> Reduction Catalysis:</strong> •	Utilized density functional theory (DFT) to investigate CO₂ reduction mechanisms on graphene based Re and Mo catalysts, identifying optimal nanographene structures to enhance efficiency and selectivity for CO and formate production.
+•	Implemented computational protocols incorporating solvation environment, pH, and concentration corrections to accurately predict reduction potentials, IR, and NMR spectra for identifying key intermediates and reaction products.
+•	Collaborated with an experimental catalysis team to facilitate the development of two novel catalysts—Re(diimine)(CO)₃Cl and Mo(diimine)(CO)₃Cl with nanographene ligands—achieving over 90% faradaic efficiency in selectively reducing CO₂ to value-added products.
+•	Investigated in situ IR spectroscopy and electrochemical cyclic voltammetry (CV) results in conjunction with computational calculations to derive detailed catalytic pathways.
+•	Elucidated previously unknown, low-energy proton-coupled electron transfer (PCET) pathways, providing key insights into selective CO₂ reduction mechanisms.
+•	Evaluated the influence of nanographene ligand size and topology on electronic properties, optimizing catalyst design to enhance activity and selectivity for CO₂ reduction.
+        </li>
         <li><strong>Methodology & Tooling:</strong> High-throughput quantum workflows, feature engineering for chemical ML, and validation against experimental observables where possible.</li>
       </ul>
     </section>
@@ -174,32 +192,32 @@
       <h2>Selected Publications</h2>
       <ul class="pubs">
         <li>
-          <span class="pub-venue">J. Am. Chem. Soc.</span> <span class="pub-year">(2025)</span> —
+          <span class="pub-venue">J. Am. Chem. Soc.</span> <span class="pub-year">(2025)</span>:
           <a href="https://pubs.acs.org/doi/10.1021/jacs.5c04852" target="_blank" rel="noopener">
             Ammonia Synthesis under Ambient Conditions via Fe<sub>3</sub>O<sub>4</sub>–Water Interfaces
           </a>
-          — Lead Author.
+          (Lead Author).
         </li>
         <li>
-          <span class="pub-venue">J. Chem. Theory Comput.</span> <span class="pub-year">(2023)</span> —
+          <span class="pub-venue">J. Chem. Theory Comput.</span> <span class="pub-year">(2023)</span>:
           <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.3c00563" target="_blank" rel="noopener">
             MIM-ML: Fragment-Based Machine Learning for NMR Prediction
           </a>
-          — Lead Author.
+          (Lead Author).
         </li>
         <li>
-          <span class="pub-venue">Phys. Chem. Chem. Phys.</span> <span class="pub-year">(2020)</span> —
+          <span class="pub-venue">Phys. Chem. Chem. Phys.</span> <span class="pub-year">(2020)</span>:
           <a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp05064d" target="_blank" rel="noopener">
             Accurate Fragmentation-Based Predictions of NMR Chemical Shifts for Proteins
           </a>.
-          — Lead Author.
+          (Lead Author).
         </li>
         <li>
-          <span class="pub-venue">Inorg. Chem.</span> <span class="pub-year">(2022)</span> —
+          <span class="pub-venue">Inorg. Chem.</span> <span class="pub-year">(2022)</span>:
           <a href="https://pubs.acs.org/doi/10.1021/acs.inorgchem.2c02400" target="_blank" rel="noopener">
             Low-Energy Pathways for Electrocatalytic CO<sub>2</sub> Reduction at Rhenium Complexes
           </a>.
-          — Lead Author.
+          (Lead Author).
         </li>
       </ul>
       <p class="muted">Complete and updated list on
@@ -238,7 +256,7 @@
         <li>LinkedIn: <a href="https://www.linkedin.com/in/sruthy-k-chandy/" target="_blank" rel="noopener">linkedin.com/in/sruthy-k-chandy</a></li>
         <li>Google Scholar: <a href="https://scholar.google.com/citations?user=2PBePvkAAAAJ&hl=en" target="_blank" rel="noopener">scholar.google.com</a></li>
         <li>CV (PDF): <a href="https://drive.google.com/file/d/1aQAtu2Q_fNNMtGWqGU9vOFqH9q2_cRg1/view?usp=sharing" target="_blank" rel="noopener">view/download</a></li>
-        <li>Groups: Ph.D. — <a href="https://raghavachari.lab.indiana.edu/" target="_blank" rel="noopener">Raghavachari Lab</a> | Postdoc — <a href="https://thglab.berkeley.edu/team/dr-sruthy-chandy/" target="_blank" rel="noopener">Head-Gordon Lab</a></li>
+        <li>Groups: Ph.D. : <a href="https://raghavachari.lab.indiana.edu/" target="_blank" rel="noopener">Raghavachari Lab</a> | Postdoc : <a href="https://thglab.berkeley.edu/team/dr-sruthy-chandy/" target="_blank" rel="noopener">Head-Gordon Lab</a></li>
       </ul>
     </section>
   </main>
