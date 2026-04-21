@@ -1,11 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sruthy K. Chandy</title>
+  <meta name="description" content="Sruthy K. Chandy — Computational Chemist and Machine Learning Scientist at UC Berkeley / LBNL" />
+  <style>
+    :root{
+      --ink:#0b4654;         /* deep teal for headers/nav */
+      --teal:#0a7f8e;        /* link/hover */
+      --soft:#eef7f8;        /* subtle bg */
+      --card:#ffffff;
+      --muted:#5b6a72;
+      --ring:rgba(10,127,142,.15);
+      --shadow:0 6px 18px rgba(0,0,0,.08);
+      --radius:14px;
+    }
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:#1f2937; background:linear-gradient(180deg,#f7fbfc 0%, var(--soft) 100%);
+      line-height:1.6;
+    }
+    /* nav */
+    .nav{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.85); border-bottom:1px solid #e6eff1;
+      transition:transform .25s ease;
+    }
+    .nav-inner{
+      max-width:1100px; margin:0 auto; padding:.65rem 1rem; display:flex; align-items:center; gap:1rem;
+    }
+    .brand{font-weight:600; color:var(--ink)}
+    .nav a{color:var(--ink); text-decoration:none; font-size:.95rem; padding:.4rem .55rem; border-radius:10px}
+    .nav a:hover{background:var(--ring)}
+    .links{margin-left:auto; display:flex; gap:.25rem; flex-wrap:wrap}
+    /* layout */
+    .wrap{max-width:1000px; margin:0 auto; padding:1rem}
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:1.35rem 1.35rem; margin:1rem 0;
+    }
+    .section{scroll-margin-top:90px}
+    h1,h2,h3{color:var(--ink); margin:0 0 .5rem 0}
+    h1{font-size:1.8rem}
+    h2{font-size:1.35rem}
+    h3{font-size:1.15rem; letter-spacing:.2px}
+    p{color:#24323a}
+    .muted{color:var(--muted)}
+    a{color:var(--teal); text-decoration:none}
+    a:hover{text-decoration:underline}
+    /* about with photo */
+    .about{
+      display:grid; grid-template-columns:150px 1fr; gap:1.25rem; align-items:start;
+    }
+    .pfp{
+      width:150px; height:150px; border-radius:50%; object-fit:cover;
+      box-shadow:0 8px 18px rgba(0,0,0,.15);
+    }
+    @media (max-width:720px){ .about{grid-template-columns:1fr} .pfp{margin:0 auto} }
+    ul{padding-left:1.15rem; margin:.4rem 0}
+    li{margin:.3rem 0}
+    /* pills for metadata */
+    .pillset{display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.5rem}
+    .pill{background:var(--ring); color:var(--ink); padding:.2rem .5rem; border-radius:999px; font-size:.85rem}
+    /* animations */
+    .reveal{opacity:0; transform:translateY(10px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1; transform:translateY(0)}
+    /* back to top */
+    #topbtn{
+      position:fixed; right:18px; bottom:18px; border:0; border-radius:999px; padding:.7rem .9rem;
+      background:var(--ink); color:#fff; cursor:pointer; box-shadow:var(--shadow);
+      display:none; transition:opacity .2s ease;
+    }
+    #topbtn:hover{background:#093b46}
+    /* footer */
+    footer{color:var(--muted); text-align:center; padding:1.5rem 0}
+    /* tables for pubs optional */
+    .pubs li{margin:.55rem 0}
+    .pub-venue{color:#324b54; font-weight:600}
+    .pub-year{color:#6b7f87}
+  </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+
+  <!-- NAV (minimal: hides on scroll down, shows on scroll up) -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="brand">Sruthy K. Chandy</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#postdoc">Postdoctoral Research</a>
+        <a href="#phd">Ph.D. Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <!-- ABOUT -->
+    <section id="about" class="section card reveal">
+      <h1>Research Interests</h1>
+      <div class="about">
+        <img src="PXL_20251004_214206593~2.jpg" alt="Sruthy K. Chandy" class="pfp" />
+        <div>
+<p>
+  I am a postdoctoral researcher at the Biodesign Institute, Arizona State University, working at the interface of computational chemistry and origins-of-life science. My research focuses on building end-to-end reactive machine learning interatomic potential (MLIP) pipelines to study fundamental chemical reactions relevant to the emergence of life.
+ Previously, I was a postdoctoral scholar at
+  <a href="https://thglab.berkeley.edu/team/dr-sruthy-chandy/" target="_blank" rel="noopener">UC&nbsp;Berkeley</a> and
+  <a href="https://profiles.lbl.gov/435123-sruthy-kettidathil-chandy/about" target="_blank" rel="noopener">Lawrence&nbsp;Berkeley&nbsp;National&nbsp;Laboratory</a>,
+  working with <strong>Prof.&nbsp;Teresa&nbsp;Head-Gordon</strong>. My research spans
+  <strong>quantum&nbsp;chemistry</strong>, <strong>molecular&nbsp;simulation</strong>, and
+  <strong>machine&nbsp;learning</strong> to understand and predict molecular and spectroscopic properties of proteins,
+  nucleic acids, catalysts, and drug molecules. Previously, I completed my Ph.D. with <strong>Prof.&nbsp;Krishnan&nbsp;Raghavachari</strong> at Indiana&nbsp;University,
+  developing fragmentation-based and data-driven approaches for molecular property prediction.
+  Throughout my academic career, I have been fortunate to collaborate closely with talented experimental chemists,
+  leading to <strong>6+ first-author papers (8&nbsp;publications&nbsp;total)</strong> that bridge computation and experiment in catalysis,
+  spectroscopy, and molecular design.
+</p>
+
+<p>
+  I am broadly interested in research at the interface of <strong>machine&nbsp;learning and chemistry</strong>.
+  My long-term goal is to build <strong>physics-informed, data-efficient, and interpretable models</strong> that connect quantum accuracy
+  with chemical realism—accelerating discovery across molecular systems, solvation environments, and design problems
+  while remaining grounded in physical principles and experimental validation.
+</p>
+          <div class="pillset">
+            <span class="pill">DFT & AIMD</span>
+            <span class="pill">AI4Science</span>
+            <span class="pill">Cheminformatics</span>
+            <span class="pill">ML for Molecular Properties</span>
+            <span class="pill">Hybrid QM/ML</span>
+            <span class="pill">HPC Workflows</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTDOC RESEARCH -->
+    <section id="postdoc" class="section card reveal">
+      <h2>Postdoctoral Research — UC Berkeley / LBNL</h2>
+      <ul>
+        <li><strong>N<sub>2</sub> Reduction at Magnetite–Water Interfaces:</strong> <p>•	Conducted advanced AIMD simulations to elucidate the nitrogen reduction mechanisms at catalytic interfaces, uncovering noval mechanistic insights that align with experimental X-ray photoelectron spectroscopy (XPS) obsevations.</p>
+<p>
+        </li>
+        <li><strong>Hybrid ML Corrections for Polarizable Force Fields:</strong> <p>•	Designed, generated, and curated a large-scale dataset (1M+ samples) of molecular interactions, then developed and trained deep learning models using PyTorch to build accurate potential energy surfaces for ion-water and water clusters.</p>
+ 
+        </li>
+        <li><strong>Dielectric Suppression in Electrolytes:</strong> <p>•	Investigated the dielectric decrement of ionic solutes (OH⁻, Na⁺, Cl⁻) in water using polarizable force fields (AMOEBA) and AIMD (CP2K), quantifying changes in dielectric constant, dipole fluctuations, RDFs, and diffusion.</p>
+  <p>•	Developed automated workflows for β (dielectric decrement coefficient) and designed benchmarking protocols to validate force fields against experiment, with applications to electrochemical interfaces and ionic transport.</p>
+        </li>
+        <li><strong>Data & Workflow Engineering:</strong> Automated dataset generation (CP2K + ASE), reproducible pipelines, and large-scale training/inference on NERSC GPU/CPU resources.</li>
+      </ul>
+    </section>
+
+    <!-- PHD RESEARCH -->
+    <section id="phd" class="section card reveal">
+      <h2>Ph.D. Research — Indiana University (Raghavachari Group)</h2>
+      <ul>
+        <li><strong>MIM-ML for NMR Prediction:</strong> <p>•	Developed a novel random forest-based machine learning model to predict NMR chemical shifts for nucleic acid systems, achieving high-level DFT accuracy with significant computational speedup.</p>
+<p>•	Leveraged fragmentation-based quantum calculations to train the ML model, enabling predictions for large systems that are computationally prohibitive with traditional QM methods.</p>
+<p>•	Integrated structural and electronic descriptors to enhance prediction reliability, accurately capturing the relationship between molecular structure and NMR chemical shifts.</p>
+        </li>
+        <li><strong>CO<sub>2</sub> Reduction Catalysis:</strong> <p>•	Utilized density functional theory (DFT) to investigate CO₂ reduction mechanisms on graphene based Re and Mo catalysts, identifying optimal nanographene structures to enhance efficiency and selectivity for CO and formate production.</p>
+<p>•	Implemented computational protocols incorporating solvation environment, pH, and concentration corrections to accurately predict reduction potentials, IR, and NMR spectra for identifying key intermediates and reaction products.</p>
+<p>•	Collaborated with an experimental catalysis team to facilitate the development of two novel catalysts—Re(diimine)(CO)₃Cl and Mo(diimine)(CO)₃Cl with nanographene ligands—achieving over 90% faradaic efficiency in selectively reducing CO₂ to value-added products.</p>
+<p>•	Investigated in situ IR spectroscopy and electrochemical cyclic voltammetry (CV) results in conjunction with computational calculations to derive detailed catalytic pathways.</p>
+
+        </li>
+        <li><strong>Methodology & Tooling:</strong> High-throughput quantum workflows, feature engineering for chemical ML, and validation against experimental observables where possible.</li>
+      </ul>
+    </section>
+
+        <!-- INDEPENDENT PROJECTS -->
+    <section id="phd" class="section card reveal">
+      <h2>Independent Projects</h2>
+      <ul>
+        <li><strong>SCALE: (Scaffold Conscious Agent for Learning & Exploration)</strong> <a href="https://github.com/schandy2211/scale" target="_blank" rel="noopener">github link</a>  <p>•	Designed a scaffold aware molecular optimizer with guardrails (sanitize, PAINS, SA), physics penalties (MMFF94 strain/atom), and diversity/scaffold constraints for hit finding and lead optimization. </p>
+<p>•	Implemented surrogate modeling (RF ensemble/UCB) and an agentic controller adapting operators and exploration/diversity per round; exported JSON logs and slide ready plots (learning curves, QED–SA tradeoff, scaffold usage, top grids).</p>
+<p>•	Upgraded to an LLM driven proposer with structured reasoning and safe edits; built an interactive UI; applied to chemosensory use cases.</p>
+        </li>
+        <li><strong>Mechanistic Analysis of Odorant Antagonism in Drosophila Or56a</strong> <a href="https://github.com/schandy2211/or56a-analysis" target="_blank" rel="noopener">github link</a> <p> •	Developed a structure-based docking workflow to differentiate agonist vs antagonist binding modes in Or56a using AlphaFold2 models and pocket topology analysis.</p>
+<p>•	Validated AlphaFold2-predicted Or56a structure through RMSD alignment with experimental ORs (8V02, 6C70).</p> <p>•	Proposed a dual-antagonism mechanism based on site-specific binding of geosmin and linalool.</p> <p> •	Completed independently as part of a technical assignment using open-source tools and data.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SELECTED PUBLICATIONS (linked). . -->
+    <section id="publications" class="section card reveal">
+      <h2>Selected Publications</h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-venue">J. Am. Chem. Soc.</span> <span class="pub-year">(2025)</span>:
+          <a href="https://pubs.acs.org/doi/10.1021/jacs.5c04852" target="_blank" rel="noopener">
+            Ammonia Synthesis under Ambient Conditions via Fe<sub>3</sub>O<sub>4</sub>–Water Interfaces
+          </a>
+          (Lead Author).
+        </li>
+        <li>
+          <span class="pub-venue">J. Chem. Theory Comput.</span> <span class="pub-year">(2023)</span>:
+          <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.3c00563" target="_blank" rel="noopener">
+            MIM-ML: Fragment-Based Machine Learning for NMR Prediction
+          </a>
+          (Lead Author).
+        </li>
+        <li>
+          <span class="pub-venue">Inorg. Chem.</span> <span class="pub-year">(2022)</span>:
+          <a href="https://pubs.acs.org/doi/10.1021/acs.inorgchem.2c02400" target="_blank" rel="noopener">
+            Low-Energy Pathways for Electrocatalytic CO<sub>2</sub> Reduction at Rhenium Complexes
+          </a>.
+          (Lead Author).
+        </li>
+        <li>
+          <span class="pub-venue">Phys. Chem. Chem. Phys.</span> <span class="pub-year">(2020)</span>:
+          <a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp05064d" target="_blank" rel="noopener">
+            Accurate Fragmentation-Based Predictions of NMR Chemical Shifts for Proteins
+          </a>.
+          (Lead Author).
+        </li>
+      </ul>
+      <p class="muted">Complete and updated list on
+        <a href="https://scholar.google.com/citations?user=2PBePvkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+      </p>
+    </section>
+
+    <!-- AWARDS (DOE award removed as requested) -->
+    <section id="awards" class="section card reveal">
+      <h2>Awards & Highlights</h2>
+      <ul>
+        <li><strong>ALS Science Highlight</strong> (2025): “From Magnetite to Ammonia, A New Line of Production.”</li>
+        <li><strong>Outstanding Poster Award</strong>, Molecular Quantum Mechanics Conference (2022).</li>
+        <li><strong>INSPIRE Fellowship</strong>, Government of India (2012–2017).</li>
+        <li><strong>Member</strong>, Sigma Xi Scientific Research Honor Society (2025).</li>
+      </ul>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section card reveal">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:schandy@berkeley.edu">schandy@berkeley.edu</a></li>
+        <li>GitHub: <a href="https://github.com/schandy2211" target="_blank" rel="noopener">github.com/schandy2211</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/sruthy-k-chandy/" target="_blank" rel="noopener">linkedin.com/in/sruthy-k-chandy</a></li>
+        <li>Google Scholar: <a href="https://scholar.google.com/citations?user=2PBePvkAAAAJ&hl=en" target="_blank" rel="noopener">scholar.google.com</a></li>
+        <li>CV (PDF): <a href="https://drive.google.com/file/d/1aQAtu2Q_fNNMtGWqGU9vOFqH9q2_cRg1/view?usp=sharing" target="_blank" rel="noopener">view/download</a></li>
+        <li>Groups: Ph.D. : <a href="https://raghavachari.lab.indiana.edu/" target="_blank" rel="noopener">Raghavachari Lab</a> | Postdoc : <a href="https://thglab.berkeley.edu/team/dr-sruthy-chandy/" target="_blank" rel="noopener">Head-Gordon Lab</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© 2025 Sruthy K. Chandy</footer>
+
+  <button id="topbtn" aria-label="Back to top">↑ Top</button>
+
+  <script>
+    // Minimal nav hide/show on scroll
+    (function(){
+      const nav = document.getElementById('nav');
+      let lastY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y > lastY && y > 80) { nav.style.transform = 'translateY(-100%)'; }
+        else { nav.style.transform = 'translateY(0)'; }
+        lastY = y;
+        // back to top
+        const t = document.getElementById('topbtn');
+        if (y > 500) { t.style.display='block'; t.style.opacity='1'; }
+        else { t.style.opacity='0'; t.style.display='none'; }
+      });
+    })();
+
+    // Reveal on scroll
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+        });
+      }, {threshold: .12});
+      els.forEach(el=>io.observe(el));
+    })();
+
+    // Back to top button
+    document.getElementById('topbtn').addEventListener('click', () => {
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  </script>
 </body>
 </html>
